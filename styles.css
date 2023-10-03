@@ -1,0 +1,33 @@
+.error {color: #FF0000;}
+
+p {
+  text-indent: 1.5em;
+  font-family: sans-serif;
+}
+
+
+#parent {
+  display: flex;
+}
+
+#title{
+  font-family: sans-serif;
+  text-align: center;
+  align-self: center;
+  background: gray;
+}
+#narrow {
+  font-family: sans-serif;
+  text-indent: 1.5em;
+  flex: 1;
+  background: lightgray;
+  /* Just so it's visible */
+}
+#wide {
+  font-family: sans-serif;
+  text-indent: 1.5em;
+  flex: 1.5;
+  /* Grow to rest of container */
+  background: lightslategray;
+  /* Just so it's visible */
+}
