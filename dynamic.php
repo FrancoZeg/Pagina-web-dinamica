@@ -55,14 +55,14 @@ function input_data($data) {
   Formación: <br><textarea name="for" rows="5" cols="40"></textarea>
   <span class="error"><?php echo $forErr;?></span>
   <br><br>
-  Idiomas: (en caso de no conocer ninguno, dejar en blanco) <br>
+  Idiomas: <br>
     <input type="checkbox" name="idiomas[]" value="Inglés"> Inglés<br>
     <input type="checkbox" name="idiomas[]" value="Portugués"> Portugués <br>
     <input type="checkbox" name="idiomas[]" value="Quechua"> Quechua<br>
     <input type="checkbox" name="idiomas[]" value="Francés"> Francés <br>
     <input type="checkbox" name="idiomas[]" value="Alemán"> Aléman<br>
     <span class="error"><?php echo $idiErr;?></span><br><br>
-  Aptitudes: (en caso de no poseer ninguna, dejar en blanco) <br>
+  Aptitudes: <br>
     <input type="checkbox" name="aptitudes[]" value="Técnica"> Técnica<br>
     <input type="checkbox" name="aptitudes[]" value="Social"> Social <br>
     <input type="checkbox" name="aptitudes[]" value="Lingüística"> Lingüística<br>
