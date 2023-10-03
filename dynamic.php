@@ -15,16 +15,16 @@ $expErr = $forErr = $aptErr = $idiErr = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {  
 
-  if (!isset($_POST['aptitudes'])) {
+  if (isset($_POST['aptitudes'])) {
+    $aptitudes = $_POST["aptitudes"];
+  } else {
     $aptErr = "Marque al menos una de sus aptitudes";
-  } else {  
-    $aptitudes = input_data($_POST["exp"]);
   } 
 
-  if (!isset($_POST['idiomas'])) {
-    $idiErr = "Marque al menos alguno de los idiomas";
+  if (isset($_POST['idiomas'])) {
+    $idiomas = $_POST['idiomas'];
   } else {  
-    $idiomas = input_data($_POST["exp"]);
+    $idiErr = "Marque al menos alguno de los idiomas";
   } 
 
   if (empty($_POST["exp"])) {  
@@ -76,7 +76,7 @@ function input_data($data) {
 
 <?php
     if(isset($_POST['submit'])) {  
-      if($expErr == "" && $forErr == "") {
+      if($expErr == "" && $forErr == "" && $aptitudes != "" && count($aptitudes) > 0 && $idiomas != "" && count($idiomas) > 0) {
     echo"<div id = 'title'><h1>Nombre de ejemplo</h1><img src = 'images/siluetagrisanonimo.png' 'style='float: left; padding: 20px;'></div><div id='parent'><div id='wide'>";
     $e = $_POST["exp"];
     $f = $_POST["for"];
